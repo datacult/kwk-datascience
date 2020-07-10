@@ -4,7 +4,8 @@ view: top_tracks {
 
   dimension: acous {
     type: number
-    sql: ${TABLE}.acous ;;
+    sql: ${TABLE}.acous
+    label:"Acoustic" ;;
   }
 
   dimension: artist {
