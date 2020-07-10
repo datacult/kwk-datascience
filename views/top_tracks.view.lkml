@@ -33,6 +33,7 @@ view: top_tracks {
 
   dimension: dur {
     label: "Duration"
+    description: "Song Duration in Milliseconds"
     type: number
     sql: ${TABLE}.dur ;;
   }
