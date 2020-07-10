@@ -51,6 +51,7 @@ view: top_tracks {
   }
 
   dimension: pop {
+    label: "Popularity"
     type: number
     sql: ${TABLE}.pop ;;
   }
@@ -93,10 +94,6 @@ view: top_tracks {
     drill_fields: []
   }
 
-  set: Music_Genres{
-    fields: [
-      pop, nrgy, dnce, acous
-    ]
-  }
+
 
 }
