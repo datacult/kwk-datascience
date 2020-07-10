@@ -37,6 +37,7 @@ view: top_tracks {
   }
 
   dimension: live {
+    label: "Liveness"
     type: number
     sql: ${TABLE}.live ;;
   }
@@ -74,7 +75,7 @@ view: top_tracks {
   }
 
   dimension: val {
-    label: "Value"
+    label: "Valence"
     type: number
     sql: ${TABLE}.val ;;
   }
