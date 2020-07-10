@@ -25,7 +25,7 @@ view: top_tracks {
   }
 
   dimension: dnce {
-    label: "dance"
+    label: "Dance"
     type: number
     sql: ${TABLE}.dnce ;;
   }
