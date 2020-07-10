@@ -31,6 +31,7 @@ view: top_tracks {
   }
 
   dimension: dur {
+    label: "Duration"
     type: number
     sql: ${TABLE}.dur ;;
   }
