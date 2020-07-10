@@ -41,18 +41,21 @@ view: top_tracks {
 
   dimension: live {
     label: "Liveness"
+    description: "Detects the presence of an audience in the recording"
     type: number
     sql: ${TABLE}.live ;;
   }
 
   dimension: nrgy {
     label: "Energy"
+    description: "A measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity"
     type: number
     sql: ${TABLE}.nrgy ;;
   }
 
   dimension: pop {
     label: "Popularity"
+    description: "Number Between 1 and 100"
     type: number
     sql: ${TABLE}.pop ;;
   }
@@ -65,6 +68,7 @@ view: top_tracks {
 
   dimension: spch {
     label: "Speech"
+    description: "Speechiness detects the presence of spoken words in a track"
     type: number
     sql: ${TABLE}.spch ;;
   }
@@ -81,6 +85,7 @@ view: top_tracks {
 
   dimension: val {
     label: "Valence"
+    description: "musical positiveness conveyed by a track"
     type: number
     sql: ${TABLE}.val ;;
   }
