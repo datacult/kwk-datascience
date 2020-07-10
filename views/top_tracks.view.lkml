@@ -21,6 +21,7 @@ view: top_tracks {
   }
 
   dimension: d_b {
+    label: "Loudness"
     type: number
     sql: ${TABLE}.dB ;;
   }
