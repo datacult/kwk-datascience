@@ -86,4 +86,11 @@ view: top_tracks {
     type: count
     drill_fields: []
   }
+
+  set: Music_Genres{
+    fields: [
+      pop, nrgy, dnce, acous
+    ]
+  }
+
 }
