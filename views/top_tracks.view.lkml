@@ -4,6 +4,7 @@ view: top_tracks {
 
   dimension: acous {
     label: "Acoustic"
+    description: "A confidence measure from 0.0 to 1.0 of whether the track is acoustic"
     type: number
     sql: ${TABLE}.acous;;
   }
@@ -22,12 +23,14 @@ view: top_tracks {
 
   dimension: d_b {
     label: "Loudness"
+    description: "The overall loudness of a track in decibels"
     type: number
     sql: ${TABLE}.dB ;;
   }
 
   dimension: dnce {
     label: "Danceability"
+    description: "A value of 0.0 is least danceable and 1.0 is most danceable"
     type: number
     sql: ${TABLE}.dnce ;;
   }
