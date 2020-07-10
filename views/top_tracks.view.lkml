@@ -15,6 +15,7 @@ view: top_tracks {
   }
 
   dimension: bpm {
+    label: "Beats Per Minute or Tempo"
     type: number
     sql: ${TABLE}.bpm ;;
   }
@@ -25,7 +26,7 @@ view: top_tracks {
   }
 
   dimension: dnce {
-    label: "Dance"
+    label: "Danceability"
     type: number
     sql: ${TABLE}.dnce ;;
   }
