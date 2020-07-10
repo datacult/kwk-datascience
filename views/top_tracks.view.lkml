@@ -94,7 +94,7 @@ view: top_tracks {
   }
 
   dimension: year {
-    type: date
+    type: string
     sql: ${TABLE}.year ;;
   }
 
