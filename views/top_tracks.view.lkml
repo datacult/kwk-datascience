@@ -55,6 +55,7 @@ view: top_tracks {
   }
 
   dimension: song_id {
+    label: "Song ID"
     type: number
     sql: ${TABLE}.song_id ;;
   }
