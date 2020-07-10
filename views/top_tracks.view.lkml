@@ -74,6 +74,7 @@ view: top_tracks {
   }
 
   dimension: val {
+    label: "Value"
     type: number
     sql: ${TABLE}.val ;;
   }
