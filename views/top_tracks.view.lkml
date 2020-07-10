@@ -9,6 +9,7 @@ view: top_tracks {
   }
 
   dimension: artist {
+    label: "Artist Name"
     type: string
     sql: ${TABLE}.artist ;;
   }
@@ -24,6 +25,7 @@ view: top_tracks {
   }
 
   dimension: dnce {
+    label: "dance"
     type: number
     sql: ${TABLE}.dnce ;;
   }
@@ -39,6 +41,7 @@ view: top_tracks {
   }
 
   dimension: nrgy {
+    label: "Energy"
     type: number
     sql: ${TABLE}.nrgy ;;
   }
@@ -54,6 +57,7 @@ view: top_tracks {
   }
 
   dimension: spch {
+    label: "Speech"
     type: number
     sql: ${TABLE}.spch ;;
   }
@@ -74,7 +78,7 @@ view: top_tracks {
   }
 
   dimension: year {
-    type: number
+    type: date
     sql: ${TABLE}.year ;;
   }
 
