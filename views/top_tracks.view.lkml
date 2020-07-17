@@ -31,7 +31,8 @@ view: top_tracks {
   measure: dnce {
     label: "Danceability"
     description: "A value of 0.0 is least danceable and 1.0 is most danceable"
-    type: sum
+    type: average
+    value_format: "0.0"
     sql: ${TABLE}.dnce ;;
   }
 
@@ -52,14 +53,17 @@ view: top_tracks {
   measure: nrgy {
     label: "Energy"
     description: "A measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity"
-    type: sum
+    type: average
+    value_format: "0.0"
     sql: ${TABLE}.nrgy ;;
   }
 
   measure: pop {
     label: "Popularity"
     description: "Number Between 1 and 100"
-    type: sum
+    type: average
+    value_format: "0.0"
+    drill_fields: [year, artist, top_genre, song_id, title]
     sql: ${TABLE}.pop ;;
   }
 
@@ -87,6 +91,19 @@ view: top_tracks {
     sql: ${TABLE}.top_genre ;;
   }
 
+  dimension: genre_parent {
+    type: string
+    sql: CASE
+      WHEN ${TABLE}.top_genre LIKE ('%pop%') THEN 'pop'
+      WHEN ${TABLE}.top_genre LIKE ('%hip hop%') THEN 'hip hop'
+      WHEN (${TABLE}.top_genre LIKE ('%edm%') OR ${TABLE}.top_genre LIKE ('%house%') OR ${TABLE}.top_genre LIKE ('%electro%') OR ${TABLE}.top_genre LIKE ('%dance%')) THEN 'dance'
+      WHEN ${TABLE}.top_genre LIKE ('%indie%') THEN 'indie'
+      WHEN ${TABLE}.top_genre LIKE ('%country%') THEN 'country'
+      WHEN ${TABLE}.top_genre LIKE ('%latin%') THEN 'latin'
+      ELSE 'other'
+      END ;;
+  }
+
   measure: val {
     label: "Valence"
     description: "musical positiveness conveyed by a track"
@@ -95,8 +112,8 @@ view: top_tracks {
   }
 
   dimension: year {
-    type: date_day_of_year
-    sql: ${TABLE}.year ;;
+    type: string
+    sql: ${TABLE}.year;;
   }
 
   measure: count {
