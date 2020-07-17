@@ -6,6 +6,7 @@ view: top_tracks {
     label: "Acoustic"
     description: "A confidence measure from 0.0 to 1.0 of whether the track is acoustic"
     type: sum
+    drill_fields: [year, artist, top_genre, song_id, title]
     sql: ${TABLE}.acous;;
   }
 
@@ -18,6 +19,7 @@ view: top_tracks {
   measure: bpm {
     label: "Beats Per Minute or Tempo"
     type: sum
+    drill_fields: [year, artist, top_genre, song_id, title]
     sql: ${TABLE}.bpm ;;
   }
 
@@ -25,6 +27,7 @@ view: top_tracks {
     label: "Loudness"
     description: "The overall loudness of a track in decibels"
     type: sum
+    drill_fields: [year, artist, top_genre, song_id, title]
     sql: ${TABLE}.dB ;;
   }
 
@@ -32,6 +35,7 @@ view: top_tracks {
     label: "Danceability"
     description: "A value of 0.0 is least danceable and 1.0 is most danceable"
     type: average
+    drill_fields: [year, artist, top_genre, song_id, title]
     value_format: "0.0"
     sql: ${TABLE}.dnce ;;
   }
@@ -40,6 +44,7 @@ view: top_tracks {
     label: "Duration"
     description: "Song Duration in Milliseconds"
     type: sum
+    drill_fields: [year, artist, top_genre, song_id, title]
     sql: ${TABLE}.dur ;;
   }
 
@@ -47,6 +52,7 @@ view: top_tracks {
     label: "Liveness"
     description: "Detects the presence of an audience in the recording"
     type: sum
+    drill_fields: [year, artist, top_genre, song_id, title]
     sql: ${TABLE}.live ;;
   }
 
@@ -54,6 +60,7 @@ view: top_tracks {
     label: "Energy"
     description: "A measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity"
     type: average
+    drill_fields: [year, artist, top_genre, song_id, title]
     value_format: "0.0"
     sql: ${TABLE}.nrgy ;;
   }
@@ -78,6 +85,7 @@ view: top_tracks {
     label: "Speech"
     description: "Speechiness detects the presence of spoken words in a track"
     type: sum
+    drill_fields: [year, artist, top_genre, song_id, title]
     sql: ${TABLE}.spch ;;
   }
 
@@ -108,6 +116,7 @@ view: top_tracks {
     label: "Valence"
     description: "musical positiveness conveyed by a track"
     type: sum
+    drill_fields: [year, artist, top_genre, song_id, title]
     sql: ${TABLE}.val ;;
   }
 
@@ -118,7 +127,7 @@ view: top_tracks {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [year, artist, top_genre, song_id, title]
   }
 
 
