@@ -2,10 +2,10 @@ view: top_tracks {
   sql_table_name: `spotify.top_tracks`
     ;;
 
-  dimension: acous {
+  measure: acous {
     label: "Acoustic"
     description: "A confidence measure from 0.0 to 1.0 of whether the track is acoustic"
-    type: number
+    type: sum
     sql: ${TABLE}.acous;;
   }
 
@@ -15,51 +15,51 @@ view: top_tracks {
     sql: ${TABLE}.artist ;;
   }
 
-  dimension: bpm {
+  measure: bpm {
     label: "Beats Per Minute or Tempo"
-    type: number
+    type: sum
     sql: ${TABLE}.bpm ;;
   }
 
-  dimension: d_b {
+  measure: d_b {
     label: "Loudness"
     description: "The overall loudness of a track in decibels"
-    type: number
+    type: sum
     sql: ${TABLE}.dB ;;
   }
 
-  dimension: dnce {
+  measure: dnce {
     label: "Danceability"
     description: "A value of 0.0 is least danceable and 1.0 is most danceable"
-    type: number
+    type: sum
     sql: ${TABLE}.dnce ;;
   }
 
-  dimension: dur {
+  measure: dur {
     label: "Duration"
     description: "Song Duration in Milliseconds"
-    type: number
+    type: sum
     sql: ${TABLE}.dur ;;
   }
 
-  dimension: live {
+  measure: live {
     label: "Liveness"
     description: "Detects the presence of an audience in the recording"
-    type: number
+    type: sum
     sql: ${TABLE}.live ;;
   }
 
-  dimension: nrgy {
+  measure: nrgy {
     label: "Energy"
     description: "A measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity"
-    type: number
+    type: sum
     sql: ${TABLE}.nrgy ;;
   }
 
-  dimension: pop {
+  measure: pop {
     label: "Popularity"
     description: "Number Between 1 and 100"
-    type: number
+    type: sum
     sql: ${TABLE}.pop ;;
   }
 
@@ -67,12 +67,13 @@ view: top_tracks {
     label: "Song ID"
     type: number
     sql: ${TABLE}.song_id ;;
+    primary_key: yes
   }
 
-  dimension: spch {
+  measure: spch {
     label: "Speech"
     description: "Speechiness detects the presence of spoken words in a track"
-    type: number
+    type: sum
     sql: ${TABLE}.spch ;;
   }
 
@@ -86,15 +87,15 @@ view: top_tracks {
     sql: ${TABLE}.top_genre ;;
   }
 
-  dimension: val {
+  measure: val {
     label: "Valence"
     description: "musical positiveness conveyed by a track"
-    type: number
+    type: sum
     sql: ${TABLE}.val ;;
   }
 
   dimension: year {
-    type: string
+    type: date_day_of_year
     sql: ${TABLE}.year ;;
   }
 
