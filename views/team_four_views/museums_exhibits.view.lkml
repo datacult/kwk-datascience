@@ -8,6 +8,12 @@ view: museums_exhibits {
     sql: ${TABLE}.Artist_continent_of_origin ;;
   }
 
+# #   dimension: artist_continent {
+# # #     type: location
+# #       sql_latitude:
+#         sql_longitude:
+# # #   }
+
   dimension_group: end {
     type: time
     timeframes: [
