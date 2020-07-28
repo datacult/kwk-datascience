@@ -23,6 +23,8 @@ view: maternal_mortality_data_pain {
   }
 
   dimension: pain__1_10_ {
+    label: "Pain Level"
+    description: "Pain rating from 1-10"
     type: number
     sql: ${TABLE}.Pain__1_10_ ;;
   }
