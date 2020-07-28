@@ -29,6 +29,7 @@ view: museums_exhibits {
   }
 
   dimension: muesuem {
+    label: "museum"
     type: string
     sql: ${TABLE}.Muesuem ;;
   }
