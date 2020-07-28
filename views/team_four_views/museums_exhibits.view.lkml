@@ -1,6 +1,6 @@
 # this is team four's view
-view: museums_exhibits {
-  sql_table_name: `kwkdatascience.team_four.museums_exhibits`
+view: museum_exhibits {
+  sql_table_name: `kwkdatascience.team_four.museum_exhibits`
     ;;
 
   dimension: artist_continent_of_origin {

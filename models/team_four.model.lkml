@@ -5,4 +5,4 @@ include: "/views/**/*.view"
 
 # for exploring views created by team four
 
-explore: museums_exhibits {}
+explore: museum_exhibits {}
