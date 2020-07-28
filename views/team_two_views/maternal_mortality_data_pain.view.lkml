@@ -3,6 +3,7 @@ view: maternal_mortality_data_pain {
     ;;
 
   dimension_group: date {
+    group_label: "Date"
     type: time
     timeframes: [
       raw,
