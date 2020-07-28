@@ -5,4 +5,6 @@ include: "/views/**/*.view"
 
 # for exploring views created by team two
 
-# explore: name_of_view
+explore: maternal_mortality_data_pain {}
+
+explore: maternal_mortality_emotions {}
