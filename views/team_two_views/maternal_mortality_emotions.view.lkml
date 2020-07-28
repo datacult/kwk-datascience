@@ -18,6 +18,7 @@ view: maternal_mortality_emotions {
   }
 
   dimension: emotions {
+    description: "emotions a pregnant person may feel"
     type: string
     sql: ${TABLE}.Emotions ;;
   }
