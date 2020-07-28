@@ -22,10 +22,7 @@ view: college_layoffs {
     sql: ${TABLE}.string_field_3 ;;
   }
 
-  dimension: number_of_affected_workers{
-    type: number
-    sql: ${TABLE}.string_field_4 ;;
-  }
+
 
   dimension: type_of_workers_affected {
     type: string
@@ -41,4 +38,10 @@ view: college_layoffs {
     type: count
     drill_fields: []
   }
+
+  measure: number_of_affected_workers{
+    type: sum
+    sql: ${TABLE}.string_field_4 ;;
+  }
+
 }
