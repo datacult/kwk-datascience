@@ -4,3 +4,4 @@ connection: "kwk"
 include: "/views/**/*.view"
 
 # for exploring views created by team eight
+explore: birth_registration {}
