@@ -14,6 +14,7 @@ view: maternal_mortality_data_pain {
     ]
     convert_tz: no
     datatype: date
+    label: "Date"
     sql: ${TABLE}.Date ;;
   }
 
