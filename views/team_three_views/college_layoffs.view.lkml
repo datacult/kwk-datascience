@@ -41,7 +41,7 @@ view: college_layoffs {
 
   measure: number_of_affected_workers{
     type: sum
-    sql: ${TABLE}.string_field_4 ;;
+    sql: cast(${TABLE}.string_field_4 as int64) ;;
   }
 
 }
