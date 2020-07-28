@@ -35,6 +35,7 @@ view: museums_exhibits {
   }
 
   dimension: name {
+    label: "Name of Artwork"
     type: string
     sql: ${TABLE}.Name ;;
   }
