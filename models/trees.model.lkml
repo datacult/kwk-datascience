@@ -10,4 +10,4 @@ datagroup: trees_default_datagroup {
 
 persist_with: trees_default_datagroup
 
-explore: tree_census_2015 {}
+explore: tree_census_2015 {hidden: yes}

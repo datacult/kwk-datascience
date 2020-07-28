@@ -10,4 +10,4 @@ datagroup: met_default_datagroup {
 
 persist_with: met_default_datagroup
 
-explore: met_objects {}
+explore: met_objects {hidden: yes}
