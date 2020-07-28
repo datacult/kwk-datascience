@@ -4,3 +4,5 @@ connection: "kwk"
 include: "/views/**/*.view"
 
 # for exploring views created by team four
+
+explore: museums_exhibits {}
