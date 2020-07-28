@@ -5,7 +5,7 @@ view: museum_exhibits {
 
   dimension: artist_continent_of_origin {
     type: string
-    sql: ${TABLE}.Artist_continent_of_origin ;;
+    sql: TRIM(${TABLE}.Artist_continent_of_origin) ;;
   }
 
 # #   dimension: artist_continent {
