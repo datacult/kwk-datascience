@@ -40,6 +40,12 @@ view: museum_exhibits {
     sql: ${TABLE}.Muesuem ;;
   }
 
+  dimension: Race {
+    label: "Race"
+    type: string
+    sql: ${TABLE}.Race_ ;;
+  }
+
   dimension: name {
     label: "Name of Artwork"
     type: string
