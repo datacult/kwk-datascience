@@ -19,14 +19,19 @@ view: mental_health {
     sql: ${TABLE}.State ;;
   }
 
-  dimension: percentage {
-    type: number
-    sql: ${TABLE}.Percentage ;;
+
+
+  measure: percentage {
+    type: sum
+    sql: ${TABLE}.percentage ;;
   }
 
 
   measure: count {
     type: count
     drill_fields: []
-  }
+
+}
+
+
 }
