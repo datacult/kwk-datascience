@@ -7,10 +7,7 @@ view: youth_with_substance_use_disorder {
     sql: ${TABLE}.Number ;;
   }
 
-  dimension: percentage {
-    type: number
-    sql: ${TABLE}.Percentage ;;
-  }
+
 
   dimension: rank {
     type: number
@@ -27,5 +24,9 @@ view: youth_with_substance_use_disorder {
     drill_fields: []
   }
 
+  measure: percentage {
+    type: sum
+    sql: ${TABLE}.percentage ;;
+  }
 
 }
