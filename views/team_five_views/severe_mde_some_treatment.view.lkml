@@ -7,10 +7,7 @@ view: severe_mde_some_treatment {
     sql: ${TABLE}.Number ;;
   }
 
-  dimension: percentage {
-    type: number
-    sql: ${TABLE}.Percentage ;;
-  }
+
 
   dimension: rank {
     type: number
@@ -25,5 +22,10 @@ view: severe_mde_some_treatment {
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: percentage {
+    type: number
+    sql: ${TABLE}.Percentage ;;
   }
 }

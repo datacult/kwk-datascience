@@ -7,10 +7,7 @@ view: youth_with_mde_no_services {
     sql: ${TABLE}.Number ;;
   }
 
-  dimension: percentage {
-    type: number
-    sql: ${TABLE}.Percentage ;;
-  }
+
 
   dimension: rank {
     type: number
@@ -25,5 +22,10 @@ view: youth_with_mde_no_services {
   measure: count {
     type: count
     drill_fields: []
+  }
+
+  measure: percentage {
+    type: number
+    sql: ${TABLE}.Percentage ;;
   }
 }
