@@ -19,8 +19,8 @@ view: mental_health {
     sql: ${TABLE}.State ;;
   }
 
-  measure: percentage {
-    type: sum
+  dimension: percentage {
+    type: number
     sql: ${TABLE}.Percentage ;;
   }
 

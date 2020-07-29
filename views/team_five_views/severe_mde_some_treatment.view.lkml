@@ -24,8 +24,8 @@ view: severe_mde_some_treatment {
     drill_fields: []
   }
 
-  measure: percentage {
-    type: sum
+ dimension: percentage {
+    type: number
     sql: ${TABLE}.Percentage ;;
   }
 }
