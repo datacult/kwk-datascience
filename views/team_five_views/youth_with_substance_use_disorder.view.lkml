@@ -25,7 +25,7 @@ view: youth_with_substance_use_disorder {
   }
 
   measure: percentage {
-    type: number
+    type: sum
     sql: ${TABLE}.Percentage ;;
   }
 }

@@ -20,12 +20,12 @@ view: severe_mde_some_treatment {
   }
 
   measure: count {
-    type: count
+    type: sum
     drill_fields: []
   }
 
   measure: percentage {
-    type: number
+    type: sum
     sql: ${TABLE}.Percentage ;;
   }
 }

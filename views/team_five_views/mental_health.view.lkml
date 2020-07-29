@@ -7,10 +7,7 @@ view: mental_health {
     sql: ${TABLE}.Number ;;
   }
 
- measure: percentage {
-    type: number
-    sql: ${TABLE}.Percentage ;;
-  }
+
 
   dimension: rank {
     type: number
@@ -21,6 +18,12 @@ view: mental_health {
     type: string
     sql: ${TABLE}.State ;;
   }
+
+  measure: percentage {
+    type: sum
+    sql: ${TABLE}.Percentage ;;
+  }
+
 
   measure: count {
     type: count

@@ -25,7 +25,7 @@ view: youth_with_mde_no_services {
   }
 
   measure: percentage {
-    type: number
+    type: sum
     sql: ${TABLE}.Percentage ;;
   }
 }
