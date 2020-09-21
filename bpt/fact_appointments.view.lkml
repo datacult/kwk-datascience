@@ -175,6 +175,6 @@ view: appointments {
 
   measure: count {
     type: count
-    drill_fields: [id,confirmationstatus,createdat_date,endtime_date,fee,status]
+    drill_fields: [id,confirmationstatus,createdat_date,endtime_date,fee,status,companies.address, companies.state, companies.name]
   }
 }
