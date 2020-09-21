@@ -49,7 +49,7 @@ explore: video_appointments {
   join: locations {
     type: left_outer
     relationship: many_to_one
-    sql_on: ${locations.id} = ${clinics.locationid} ;;
+    sql_on: ${locations.id} = ${companies.locationid} ;;
   }
 
 }

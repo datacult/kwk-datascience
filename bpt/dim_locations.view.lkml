@@ -55,15 +55,20 @@ view: locations {
   #   sql: ${TABLE}."ISVERIFIED" ;;
   # }
 
-  dimension: lat {
-    type: number
-    sql: ${TABLE}."LAT" ;;
+
+
+  dimension: latlon {
+    label: "Lat, Lon"
+    type: location
+    sql_latitude: ${TABLE}."LAT" ;;
+    sql_longitude: ${TABLE}."LNG" ;;
   }
 
-  dimension: lng {
-    type: number
-    sql: ${TABLE}."LNG" ;;
-  }
+#   dimension: lat {
+#     type: location
+#     sql: ${TABLE}."LAT" ;;
+#   }
+
 
   dimension: state {
     type: string
