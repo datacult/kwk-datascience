@@ -314,6 +314,6 @@ view: video_appointments {
 
   measure: count {
     type: count
-    drill_fields: [id,bookingplatform,confirmationstatus,createdat_date,starttime_date,endtime_date]
+    drill_fields: [id,bookingplatform,confirmationstatus,createdat_date,starttime_date,endtime_date,companies.address, companies.state, companies.name]
   }
 }

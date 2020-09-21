@@ -117,7 +117,7 @@ view: companies {
   dimension: city {
     type: string
     group_label: "Geo"
-    sql: ${TABLE}."CITY" ;;
+    sql: TRIM(${TABLE}."CITY") ;;
   }
 
   measure: clinics {
@@ -387,6 +387,6 @@ view: companies {
 
   measure: count {
     type: count
-    drill_fields: [id, emrname, companyname]
+    drill_fields: [id, emrname, companyname, address, city, state]
   }
 }
