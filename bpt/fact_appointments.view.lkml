@@ -10,6 +10,8 @@ view: appointments {
     sql: ${TABLE}."ID" ;;
   }
 
+  ##
+
   dimension: cancelledby {
     type: string
     hidden: yes
